@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container py-4">
+    <p>Bài 1 Nhập ngày tháng năm, kiểm tra ngày trước và sau của ngày nhập</p>
+    <p>ngày <input type="text" name="" id="date" placeholder="nhập ngày"></p>
+    <p>tháng <input type="text" name="" id="mounth" placeholder="nhập tháng"></p>
+    <p>năm <input type="text" name="" id="year" placeholder="nhập năm"></p>
+    <button type="button" onclick="cal_date()" class="btn btn-primary"> Tính ngày</button>
+    <div id="date_before"></div>
+    <div id="date_after"></div>
+  </div>
+  <div class="container py-4">
+    <p>Bài 2 Nhập tháng năm, kiểm tra ngày trước và sau của ngày nhập</p>
+    <p>tháng <input type="text" name="" id="mounth_1" placeholder="nhập tháng"></p>
+    <p>năm <input type="text" name="" id="year_1" placeholder="nhập năm"></p>
+    <button type="button" onclick="date_nhuan()" class="btn btn-primary"> Tính ngày</button>
+    <div id="date_present"></div>
+  </div>
+  <div class="container py-4">
+    <p>Bài 3 nhập số nguyên có 3 chữ số, in ra cách đọc</p>
+    <p>Nhập số 3 chữ số <input type="text" name="" id="3int" placeholder="nhập số nguyên 3 chữ số"></p>
+    <button type="button" onclick="read_number()" class="btn btn-primary"> Đọc số</button>
+    <div id="read_3integer"></div>
+  </div>
+  <div class="container py-4">
+    <p>Bài 4 nhập tên và tọa độ sinh viên, in tên sinh viên xa trường nhất</p>
+    <p>Tên sinh viên 1 <input type="text" name="" id="name_sv1" placeholder="nhập tên"> Tọa độ X <input type="number"
+        name="" id="axis_x1" placeholder="nhập tọa độ X"> Tọa độ Y <input type="number" name="" id="axis_y1"
+        placeholder="nhập tọa độ Y"></p>
+    <p>Tên sinh viên 2 <input type="text" name="" id="name_sv2" placeholder="nhập tên"> Tọa độ X <input type="number"
+        name="" id="axis_x2" placeholder="nhập tọa độ X"> Tọa độ Y <input type="number" name="" id="axis_y2"
+        placeholder="nhập tọa độ Y"></p>
+    <p>Tên sinh viên 3 <input type="text" name="" id="name_sv3" placeholder="nhập tên"> Tọa độ X <input type="number"
+        name="" id="axis_x3" placeholder="nhập tọa độ X"> Tọa độ Y <input type="number" name="" id="axis_y3"
+        placeholder="nhập tọa độ Y"></p>
+    <p>Tọa độ trường</p>
+    <p>Tọa độ X <input type="number" name="" id="axis_schx" placeholder="nhập tọa độ X"> Tọa độ Y <input type="number"
+        name="" id="axis_schy" placeholder="nhập tọa độ Y"></p>
+
+    <button type="button" onclick="sv_farfromSchool()" class="btn btn-primary"> Tìm kiếm</button>
+    <div id="sv_mostFar"></div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
