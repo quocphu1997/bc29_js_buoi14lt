@@ -288,9 +288,9 @@ function read_number() {
 // khối 3
 
 function sv_farfromSchool() {
-  var name_sv1 = getEle("name_sv1");
-  var name_sv2 = getEle("name_sv2");
-  var name_sv3 = getEle("name_sv3");
+  var name_sv1 = getEle("name_sv1").value;
+  var name_sv2 = getEle("name_sv2").value;
+  var name_sv3 = getEle("name_sv3").value;
 
   var x_axis1 = getEle("axis_x1").value;
   var x_axis2 = getEle("axis_x2").value;
@@ -316,6 +316,27 @@ function sv_farfromSchool() {
   var d2; // chiều dài sinh viên 2
   var d3; // chiều dài sinh viên 3
   //khoang cách sinh viên 1
-  var d1 = Math.sqrt(Math.pow(x_axis1 - x_sch) + Math.pow(y_axis1 - y_sch));
-  console.log(d1);
+  d1 = Math.sqrt(
+    (x_axis1 - x_sch) * (x_axis1 - x_sch) +
+      (y_axis1 - y_sch) * (y_axis1 - y_sch)
+  );
+  d2 = Math.sqrt(
+    (x_axis2 - x_sch) * (x_axis2 - x_sch) +
+      (y_axis2 - y_sch) * (y_axis2 - y_sch)
+  );
+  d3 = Math.sqrt(
+    (x_axis3 - x_sch) * (x_axis3 - x_sch) +
+      (y_axis3 - y_sch) * (y_axis3 - y_sch)
+  );
+  if (d1 > d2 && d1 > d3) {
+    getEle("sv_mostFar").innerHTML =
+      "Sinh viên " + name_sv1 + " xa trường nhất";
+  } else if (d2 > d1 && d2 > d3) {
+    getEle("sv_mostFar").innerHTML =
+      "Sinh viên " + name_sv2 + " xa trường nhất";
+  } else if (d3 > d1 && d3 > d2) {
+    getEle("sv_mostFar").innerHTML =
+      "Sinh viên " + name_sv3 + " xa trường nhất";
+  }
+
 }
